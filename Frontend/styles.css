@@ -1,0 +1,228 @@
+/* Import Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #da70d6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#app {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 190%;
+    max-width: 600px;
+    padding: 90px;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    animation: slideIn 0.5s ease-out;
+}
+
+#fhead{
+
+    margin-bottom: 20px;color: #4B0082;
+    animation: fadeRight 1.2s ease-out;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    animation: slideUp 1.2s ease-out;
+
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: slideUp 1.2s ease-out;
+
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+li:hover {
+    background-color: #f4eded;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ebe0e0;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 6px rgba(3, 0, 0, 0.1);
+    animation: slideUp 1.2s ease-out;
+}
+li span {
+    flex-grow: 1; /* Allows the task text to take up remaining space */
+    margin-right: 20px; /* Adds spacing between the text and buttons */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure text wraps correctly */
+}
+
+li div {
+    display: flex; /* Buttons remain horizontally aligned */
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+
+li button {
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+li button:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn {
+    background-color: #ff07fb;
+}
+
+.edit-btn:hover {
+    background-color: #be00e0;
+}
+
+.delete-btn {
+    background-color: #e8152a;
+}
+
+.delete-btn:hover {
+    background-color: #C82333;
+}
+.complete-btn {
+    background-color: #28A745;
+}
+.complete-btn:hover {
+    background-color: #218838;
+}
+/* Pop-up Container */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* Black transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Pop-up Content */
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    animation: popupFadeIn 0.5s ease-in-out; /* Pop-up entrance animation */
+}
+
+/* Popup Animation */
+@keyframes popupFadeIn {
+    from {   opacity: 0;    transform: scale(0.8);  }
+    to {opacity: 1;  transform: scale(1);     }
+}
+
+/* Celebration Animation */
+@keyframes confetti {
+    0% { transform: rotate(0) translateX(0); }
+    100% { transform: rotate(360deg) translateX(200px); }
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+    from {  transform: translateY(30px);opacity: 0; }
+    to { transform: translateY(0);  opacity: 1; }
+}
+
+@keyframes fadeLeft {
+    from {opacity: 0;transform: translateX(-30px);
+    to { opacity: 1;transform: translateX(0); 
+}
+   
+}}
+@keyframes fadeRight {
+    from {opacity: 0;transform: translateX(30px); 
+    to { opacity: 1;transform: translateX(0); 
+}
+   
+}}
+
+   
