@@ -3,24 +3,85 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #da70d6;
     margin: 0;
-    padding: 0;
+    padding: 80px 0 0 0; /* Add padding at the top to avoid overlap */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    overflow: scroll;
 }
+
+
 
 #app {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Keep the app width responsive */
+    max-width: 600px;
+    padding: 60px;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+
+/* Style for the table */
+#task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style for table headers */
+#task-table th {
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+/* Style for table cells */
+#task-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Zebra striping for rows */
+#task-table:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+#task-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Responsive table styling */
+@media screen and (max-width: 600px) {
+    .table {
+        font-size: 14px;
+    }
+}
+
+#panel{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 190%;
     max-width: 600px;
-    padding: 90px;
+    padding: 60px;
     text-align: center;
     animation: slideIn 0.5s ease-out;
     align-items: center;
+    margin-top: 27px;
 }
 
 h1 {
@@ -105,7 +166,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ebe0e0;
+    background-color: #d3cece;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -184,34 +245,6 @@ li button:hover {
     animation: popupFadeIn 0.5s ease-in-out; /* Pop-up entrance animation */
 }
 
-footer {
-    
-    position: fixed;
-    right: 20px; /* Adjust distance from the right edge */
-    top: 20px; /* Adjust distance from the bottom edge */
-    display: flex;
-    align-items: center;
-    background-color: gainsboro;
-    color: navy;
-    padding: 10px;
-    border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    font-family: 'Poppins', sans-serif;
-}
-
-footer img {
-    border-radius: 50%; /* To make the image circular */
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-}
-
-footer p {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-}
 
 
 /* Popup Animation */

@@ -8,29 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <h1 id="fhead">&#127919Conquer every single day - Start now &#128640</h1>
+
+  
     <div id="app">
         <h1>&#x1F4DD To-Do List</h1>
         <form id="task-form">
             <input type="text" id="task-input" placeholder="Add a new task..." required>
             <button type="submit" class="btn">Add Task</button>
         </form>
-        <ul id="task-list"></ul>
+        <ul id="task-list"></ul> 
     </div>
-    <div id="popup" class="popup-container">
+    <div id="popup" class="popup-container"> //opo-up after complete button onclick
         <div class="popup-content">
             <h2>🎉 Completed Successfully! 🎉</h2>
             <p>One Step closer to Greatness&#128293 Keep Growing</p>
         </div>
+    </div> 
+    <div id="panel">
+        <input type="text" id="search-input" placeholder="Search your task" />
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>    
     </div>
+ 
+       
+    
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-    <footer>
-        <img src="img/Profile.png" alt="Murali Kumar's Profile Picture">
-        <p>Designed by,<br>Murali Kumar <br> <a href="https://www.behance.net/muralibeast">View more designs > </a></p>
-       
-    </footer>
-
+    
 </body>
 </html>

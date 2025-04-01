@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NewStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="watermark">
+        <img src="./img/Profile.png" style="height: 60px;width: 60px;border-radius: 50%;margin-right: 10px;"/>
+        <div>
+            <img src="./img/Brand.png" style="width: 100px;height: 100px;margin-bottom: -27px;"/><br><a href="https://www.behance.net/muralibeast" style="font-size: 13px;">View more designs ></a></p>
+        </div>
+    </div>
+    <h1 id="fhead" style="color: navy;">&#127919Conquer every single day - Start now &#128640</h1>
+    <div class="container">
+        <div class="header-container">
+            <h1>&#x1F4DD To-Do List</h1>
+            <button id="favourites-btn">❤️ Favourites</button>
+        </div>
+        
+        
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task..." required>
+            <button type="submit" class="btn">+ Add Task</button>
+        </form>
+        <div class="filter-container">
+            <label class="filter-label">
+                <input type="radio" name="filter" value="all" checked>
+                All
+            </label>
+            <label class="filter-label">
+                <input type="radio" name="filter" value="inprogress">
+                In Progress
+            </label>
+            <label class="filter-label">
+                <input type="radio" name="filter" value="completed">
+                Completed
+            </label>
+        </div>
+        <div id="popup" class="popup-container"> 
+            <div class="popup-content">
+                <h2>🎉 Completed Successfully! 🎉</h2>
+                <p>One Step closer to Greatness&#128293 Keep Growing</p>
+            </div>
+        </div> 
+        <ul id="taskList">
+            <!-- Tasks will be dynamically added here -->
+        </ul>
+        <div id ="taskCount" style="display: flex;justify-content: space-between;">
+            <div id="pendingTaskCount" style="font-weight: bold; margin: 10px 0;left: 5px;">
+            </div>
+            <div id="completeTaskCount" style="font-weight: bold; margin: 10px 0;left: 5px;">
+            </div>
+        </div>
+        <button id="clear-completed" style="margin: 10px auto; display: block; background-color: red; color: white; border: none; padding: 10px 20px; border-radius: 9px; cursor: pointer;">
+            Clear Completed Tasks
+        </button>
+        
+        
+        
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="NewScript.js"></script>
+</body>
+</html>

@@ -33,6 +33,7 @@ $(document).ready(function () {
             url: 'http://127.0.0.1:3000/tasks', // Fetch all tasks
             method: 'GET',
             success: function (tasks) {
+                console.log('Fetched tasks:', tasks); // Log fetched tasks
                 $('#task-list').empty(); // Clear current list
                 tasks.forEach(task => {
                     const taskElement = renderTask(task); // Generate task HTML
@@ -45,6 +46,8 @@ $(document).ready(function () {
                         taskItem.css('cursor', 'not-allowed'); // Disable interaction
                     }
                 });
+                populateTaskTable(tasks); 
+                applySearchFilter(); 
             },
             error: function (err) {
                 console.error('Error fetching tasks:', err);
@@ -120,9 +123,9 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify({ status: 1 }), // Set status to 1
             success: function () {
-                taskItem.find('.edit-btn, .delete-btn').remove(); // Remove Edit/Delete buttons
-                taskItem.find('.complete-btn').replaceWith('<span class="text-completed" style="color:green"><strong>Completed &#9989;</strong></span>'); // Replace Complete button with text
-                taskItem.css('cursor', 'not-allowed'); // Disable cursor changes
+                // taskItem.find('.edit-btn, .delete-btn').remove(); // Remove Edit/Delete buttons
+                // taskItem.find('.complete-btn').replaceWith('<span class="text-completed" style="color:green"><strong>Completed &#9989;</strong></span>'); // Replace Complete button with text
+                // taskItem.css('cursor', 'not-allowed'); // Disable cursor changes
 
                 const popup = $('#popup');
                 popup.fadeIn(); // Show the pop-up with fade-in animation
@@ -148,7 +151,7 @@ $(document).ready(function () {
             }
         });
     });
-
+    
     // Fetch tasks on page load
     fetchTasks();
 });
