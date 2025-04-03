@@ -78,11 +78,14 @@ $(document).ready(function () {
     function renderTask(task) {
         return `
             <li data-id="${task.id}">
-                <span>${task.name}</span>
-                <div>
+            <div class="task-container">
+                <span class="task-name">${task.name}</span>
+                <div class="task-actions">
+                    <button class="favorites-btn"><i class="fa-solid fa-heart"></i></button>
                     <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
                     <button class="complete-btn"><i class="fa-solid fa-check"></i></button>
+                </div>
                 </div>
             </li>
         `;

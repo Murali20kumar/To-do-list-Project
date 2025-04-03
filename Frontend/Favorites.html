@@ -7,13 +7,57 @@
         <link rel="stylesheet" href="NewStyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            
+            #header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Aligns items to opposite ends */
+                margin-top: 20px;
+                padding: 0 20px; /* Adds spacing around the content */
+            }
+        
+            #back-btn {
+                font-size: 1.2em; /* Adjust size of the button */
+                position: absolute;
+                left: 30%;
+            }
+        
+            h1 {
+                font-size: 2em;
+                color: navy;
+                margin: 0; 
+                text-align: center; /
+            }
+            .container {
+               background-color: #fff;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+               width: 100%; /* Keep the app width responsive */
+               max-width: 600px;
+               padding: 60px;
+              text-align: center;
+              animation: slideIn 0.5s ease-out;
+              margin-top: 40px;
+  }
+
+        </style>
     </head>
     <body>
-        <div>
-            <p>Favorite tasks</p>
+        <div id="header">    
+            <button id="back-btn" onclick="location.href='./NewIndex.html';"><i class="fa-solid fa-arrow-left"></i></button>
+            <h1>❤️Favorite tasks</h1>
+        </div>
+
+        <div class="container">
+            <ul id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+    
             <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="NewScript.js"></script>
-        </div>
+       
     </body>
 </html>

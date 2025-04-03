@@ -100,6 +100,16 @@ img {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.favorites-btn{
+  color:red;
+  background-color: #fff;
+margin-right: 2px;
+}
+
+.favorites-btn:hover{
+  background-color: silver;
+}
+
 
   .edit-btn{
     background-color: #2979ff;
@@ -255,15 +265,27 @@ form {
 }
 
 #taskList li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Optional for better separation */
+  list-style: none; /* Removes bullets */
 }
+
+/* Container for task content and actions */
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.task-name {
+    flex-grow: 1; /* Allows the name to take available space */
+    margin-right: 10px;
+    font-size: 16px;
+    word-wrap: break-word; /* Ensures long text wraps properly */
+}
+
 
   /* All Animations */
 
