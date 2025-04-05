@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 
-// Create an Express app (Global Variables)
+// Express app (Global Variables)
 const app = express();
 const port = 3000;
 
